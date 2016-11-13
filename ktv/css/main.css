@@ -1,0 +1,255 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	min-width: 1200px;
+	background-color: #fff;
+}
+body,button,input,select,textarea,th{
+	color: #333;
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 1.5;
+	font-family: "Microsoft YaHei";
+}
+body{
+	overflow-y: scroll;
+	position: relative;
+	color: #faf1e0;
+	font-size: 100%;
+	line-height: 1.25;
+	font-weight: 300;
+}
+a{
+	text-decoration: none;
+	color: #333;
+	cursor: auto;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	border: none;
+}
+body,div,ul,li{
+	margin: 0;
+	padding: 0;
+}
+input{
+	border: none;
+}
+h1{
+	display: block;
+}
+button{
+	outline: none;
+}
+strong{
+	color: #aaa;
+}
+section{
+	padding: 0;
+	height: 68px;
+	text-align: justify;
+	max-width: 245px;
+	clear: both;
+	position: absolute;
+	right: -10px;
+	top: 0px;
+}
+section p {
+	font-size: 1.5em;
+	line-height: 1.75;
+}
+section > p:first-child {
+	text-align: center;
+}
+.header{
+	background-color: #121214;
+	position: relative;
+	z-index: 4;
+	height: 68px;
+	min-width: 1200px;
+}
+.section_inner{
+	width: 1200px;
+	height: 68px;
+	margin: 0 auto;
+	position: relative;
+}
+.ktv_title{
+	position: absolute;
+	left: -30px;
+	top: -21px;
+}
+.nav {
+  width: 418px;
+  margin: 0 auto;
+  color: #f0f0f0;
+  position: absolute;
+  left: 200px;
+}
+.nav a {
+  display: block;
+  padding: 0 14px;
+  line-height: inherit;
+  cursor: pointer;
+  color: #fff;
+}
+.nav_menu {
+  line-height: 68px;
+  text-transform: uppercase;
+}
+.active1{
+	background-color: #313131;
+	border-top: 4px solid #fd3d1a;
+}
+.active2{
+	background-color: #fd3d1a;
+}
+.nav_menu-item {
+  display: inline-block;
+  position: relative;
+  font-weight: normal;
+  color: #fff;
+}
+.nav_menu-item:hover {
+  background-color: #313131;
+  border-top: 4px solid #fd3d1a;
+}
+.nav_menu-item a:hover{
+	color: #fff;
+}
+.nav_menu-item:hover .nav_submenu {
+  display: block;
+}
+.nav_submenu {
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 120px;
+  background-color: #696969;
+  font-weight: lighter;
+  line-height: 45px;
+}
+.nav_submenu-item:hover {
+	background-color: #fd3d1a;
+}
+.welcome{
+	position: absolute;
+	top: 200px;
+	left: 372px;
+	width: 600px;
+	height: 200px;
+	font-family: "youyuan";
+}
+.welcome h1{
+	color: #fff;
+	font-size: 50px;
+	font-weight: lighter;
+	margin-top:60px;
+	margin-left: 73px;
+}
+.welcome h4{
+	color: #fff;
+	font-weight: lighter;
+	font-size: 30px;
+	margin: -10px 210px;
+}
+.btn{
+	display: inline-block;
+	padding:6px 12px;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	background-color: #31c27c;
+	color: #fff;
+	width: 176px;
+	height: 50px; 
+	margin-left: 210px;
+	margin-top: 30px;
+}
+.about_us{
+	width: 100%;
+	height: 640px;
+	position: relative;
+}
+.our_team{
+	position: absolute;
+	left: 39%;
+	top: 10px;
+}
+.picture{
+	position: absolute;
+	top: 60px;
+	width: 1345px;
+	height: 580px;
+}
+.mockup-content h2 {
+	font-size: 2em;
+	margin: 0;
+}
+.footer{
+	height: 40px;
+	width: 100%;
+	background-color: #121214;
+	margin-top: -4px;
+}
+.footer p{
+	margin-left:628px;
+	margin-top: 2px;
+	padding-top: 12px;
+	color: #fff;
+	font-size: 12px;
+}
+.nav-singer{
+	width: 100%;
+	height: 200px;
+}
+.singer{
+	width: 1200px;
+	height: 100px;
+	background-color: #e4e4e4;
+	font-size: 14px;
+	line-height: 21px;
+	float: left;
+	margin:30px 77px;
+}
+.singer a{
+	color: #333;
+}
+.singer a:hover{
+	color: #fd3d1a;
+}
+.nav-singer-1{
+	width: 100%;
+	height: 60px;
+}
+.nav-singer-1 ul li{
+	float: left;
+	height: 26px;
+	line-height: 27px;
+	margin: 15px 12px 15px 20px;
+	padding: 0 8px;
+}
+.nav-singer-2 ul li{
+	float: left;
+	height: 26px;
+	line-height: 21px;
+	margin: 0px -10px 15px 30px;
+}
+.singer-list ul li{
+	float: left;
+	widows: 20%;
+}
+.singer-list a{
+	color: #333;
+}

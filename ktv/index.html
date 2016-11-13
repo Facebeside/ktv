@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="stylesheet" type="text/css" href="css/search-form.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/lrtk.css" />
+	<title>登陆/注册</title>
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+	<!--导航栏-->
+	<div class="header">
+		<div class="section_inner">
+			<!--logo-->
+			<h1 class="ktv_title">
+				<a href="#">
+					<img src="images/logo.png" width="" height="88">
+				</a>
+			</h1>
+			<!--导航-->
+			<nav class="nav">
+ 				<ul class="nav_menu">
+    				<li class="nav_menu-item active1"><a href="index.html">首页</a></li>
+    				<li class="nav_menu-item"><a href="http://www.lanrentuku.com/" target="_self">音乐库</a>
+	      				<ul class="nav_submenu">
+	        				<li class="nav_submenu-item"> <a href="http://www.lanrentuku.com/" target="_blank">歌手</a></li>
+	        				<li class="nav_submenu-item"> <a href="http://www.lanrentuku.com/" target="_blank">排行榜</a></li>
+	       	 				<li class="nav_submenu-item"> <a href="http://www.lanrentuku.com/" target="_blank">歌单</a></li>
+	      				</ul>
+    				</li>
+    				<li class="nav_menu-item"><a href="http://www.lanrentuku.com/" target="_blank">个人中心</a></li>
+    				<li class="nav_menu-item"><a href="http://www.lanrentuku.com/" target="_blank">欢唱厅</a></li>
+    				<li class="nav_menu-item"><a href="#about_us">关于我们</a></li>
+  				</ul>
+			</nav>
+			<!--搜索框-->
+			<div>
+				<form onsubmit="submitFn(this, event);">
+			        <div class="search-wrapper">
+			            <div class="input-holder">
+			                <input type="text" class="search-input" placeholder="请输入关键字" style="font-family:youyuan"/>
+			                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+			            </div>
+			            <span class="close" onclick="searchToggle(this, event);"></span>
+			            <div class="result-container">
+
+			            </div>
+			        </div>
+			    </form>
+			</div>
+			<!--login-->
+			<div class="container1">
+				<section>
+					<div class="mockup-content">
+						<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+							<button type="button">登陆</button>
+							<div class="morph-content">
+								<div>
+									<div class="content-style-form content-style-form-1">
+										<span class="icon icon-close">Close the dialog</span>
+										<h2>登陆</h2>
+										<form>
+											<p><label>用户名</label><input type="text" /></p>
+											<p><label>密码</label><input type="password" /></p>
+											<p><button>Login</button></p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div><!-- morph-button -->
+						<strong>|</strong>
+						<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+							<button type="button">注册</button>
+							<div class="morph-content">
+								<div>
+									<div class="content-style-form content-style-form-2">
+										<span class="icon icon-close">Close the dialog</span>
+										<h2>注册</h2>
+										<form>
+											<p><label>用户名</label><input type="text" /></p>
+											<p><label>密码</label><input type="password" /></p>
+											<p><label>重复密码</label><input type="password" /></p>
+											<p><button>Sign Up</button></p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div><!-- morph-button -->
+					</div><!-- /form-mockup -->
+				</section>
+			</div>
+		</div>
+	</div>
+	<!--首页登陆背景-->
+	<div class="bg-nav">
+		<img src="images/bg-nav.png" width="100%" height="612">
+		<div class="welcome">
+			<h1>唱我想唱，唱你想听</h1>
+			<h4>你的私人<span style="font-family:Microsoft YaHei">KTV</span></h4>
+		</div>			
+	</div>
+    <!--关于我们-->
+    <div class="about_us" id="about_us">
+    	<div class="our_team">
+    		<img src="images/ourteam.png">
+    	</div>
+    	<div class="picture">
+    		<img src="images/bg2.png">
+    	</div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+    	<footer>
+  			<p>畅唱KTV点歌系统</p>
+		</footer>
+    </div>
+    <!--置顶-->
+    <div class="actGotop">
+    	<a href="javascript:;" title="Top"></a>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/classie.js"></script>
+	<script src="js/uiMorphingButton_fixed.js"></script>
+	<!--login-->
+	<script>
+			(function() {
+				var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+				// trick to prevent scrolling when opening/closing button
+				function noScrollFn() {
+					window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+				}
+
+				function noScroll() {
+					window.removeEventListener( 'scroll', scrollHandler );
+					window.addEventListener( 'scroll', noScrollFn );
+				}
+
+				function scrollFn() {
+					window.addEventListener( 'scroll', scrollHandler );
+				}
+
+				function canScroll() {
+					window.removeEventListener( 'scroll', noScrollFn );
+					scrollFn();
+				}
+
+				function scrollHandler() {
+					if( !didScroll ) {
+						didScroll = true;
+						setTimeout( function() { scrollPage(); }, 60 );
+					}
+				};
+
+				function scrollPage() {
+					scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+					didScroll = false;
+				};
+
+				scrollFn();
+
+				[].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+					new UIMorphingButton( bttn, {
+						closeEl : '.icon-close',
+						onBeforeOpen : function() {
+							// don't allow to scroll
+							noScroll();
+						},
+						onAfterOpen : function() {
+							// can scroll again
+							canScroll();
+						},
+						onBeforeClose : function() {
+							// don't allow to scroll
+							noScroll();
+						},
+						onAfterClose : function() {
+							// can scroll again
+							canScroll();
+						}
+					} );
+				} );
+
+				// for demo purposes only
+				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+				} );
+			})();
+	</script>
+	<!--搜索-->
+	<script type="text/javascript">
+        	function searchToggle(obj, evt){
+            var container = $(obj).closest('.search-wrapper');
+
+            if(!container.hasClass('active')){
+                  container.addClass('active');
+                  evt.preventDefault();
+            }
+            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                  container.removeClass('active');
+                  // clear input
+                  container.find('.search-input').val('');
+                  // clear and hide result container when we press close
+                  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+            }
+       		}
+        	function submitFn(obj, evt){
+            	value = $(obj).find('.search-input').val().trim();
+            	_html = "Yup yup! Your search text sounds like this: ";
+            	if(!value.length){
+               		_html = "Yup yup! Add some text friend :D";
+            	}
+            	else{
+                	_html += "<b>" + value + "</b>";
+            	}
+            	$(obj).find('.result-container').html('<span>' + _html + '</span>');
+            	$(obj).find('.result-container').fadeIn(100);
+            	evt.preventDefault();
+        	}
+    </script>
+    <!--置顶-->
+	<script type="text/javascript">
+		$(function(){	
+			$(window).scroll(function() {		
+				if($(window).scrollTop() >= 100){ 
+					$('.actGotop').fadeIn(300); 
+				}else{    
+					$('.actGotop').fadeOut(300); 
+				}  
+			});
+			$('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);}); 
+		});
+	</script>
+</body>
+</html>

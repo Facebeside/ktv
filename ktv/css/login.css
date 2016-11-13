@@ -1,0 +1,411 @@
+/* Icons */
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?i64fx9');
+	src:url('../fonts/icomoon/icomoon.eot?#iefixi64fx9') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?i64fx9') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?i64fx9') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?i64fx9#icomoon') format('svg');
+}
+.icon-close {
+	z-index: 100;
+	display: block;
+	overflow: hidden;
+	width: 3em;
+	height: 3em;
+	text-align: center;
+	line-height: 3;
+	cursor: pointer;
+}
+.icon:before {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'icomoon';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-camera:before {
+	content: "\e017";
+}
+.icon-server:before {
+	content: "\e022";
+}
+.icon-heart:before {
+	content: "\e024";
+}
+.icon-zoom-in:before {
+	content: "\e037";
+}
+.icon-microphone:before {
+	content: "\e048";
+}
+.icon-cloud:before {
+	content: "\e066";
+}
+.icon-user:before {
+	content: "\e074";
+}
+.icon-briefcase:before {
+	content: "\e075";
+}
+.icon-globe:before {
+	content: "\e078";
+}
+.icon-cog::before {
+	content: "\e600";
+}
+.icon-close::before {
+	content: "\e601";
+}
+.icon-play::before {
+	content: "\e602";
+}
+.icon-pause::before {
+	content: "\e603";
+}
+.icon-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.icon-close:hover {
+	color: #a50a05;
+}
+.content-style-form {
+	position: relative;
+	text-align: left;
+}
+.content-style-form h2 {
+	margin: 0;
+	padding: 0.4em 0 0.3em;
+	text-align: center;
+	font-weight: 300;
+	font-size: 3.5em;
+}
+.content-style-form form {
+	padding: 25px 30px;
+}
+.content-style-form form p {
+	margin: 0 0 5px 0;
+	font-size: 0.7em;
+}
+.content-style-form label {
+	display: block;
+	padding: 10px 0 0;
+	color: #ebd3bd;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 16px;
+}
+.content-style-form input[type="text"],
+.content-style-form input[type="password"] {
+	padding: 1px;
+	width: 100%;
+	border: 2px solid #ebd3bd;
+	background: transparent;
+	color: #b09a86;
+	font-weight: 300;
+	font-size: 2.2em;
+}
+.content-style-form input[type="text"]:focus,
+.content-style-form input[type="password"]:focus {
+	border-color: #fd3d1a;
+	color:#fd3d1a;
+}
+.content-style-form input:focus {
+	outline: 0;
+}
+.content-style-form button {
+	display: block;
+	margin-top: 2.5em;
+	padding: 1.5em;
+	width: 100%;
+	border: none;
+	background: #fd3d1a;
+	color: #f9f6e5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 800;
+	font-size: 1.25em;
+}
+.content-style-form .icon-close {
+	top: 0;
+	right: 0;
+	color: #ebd3bd;
+	font-size: 75%;
+}
+.content-style-form .icon-close:hover {
+	color: #fd3d1a;
+}
+.js .content-style-form-1 h2,
+.js .content-style-form-1 p,
+.js .content-style-form-1 .icon-close {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s 0.35s, -webkit-transform 0.2s 0.35s;
+	transition: opacity 0.2s 0.35s, transform 0.2s 0.35s;
+	-webkit-transform: scale(0.85);
+	transform: scale(0.85);
+}
+.content-style-form-1 p:first-child {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+.content-style-form-1 p:nth-child(2) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+.content-style-form-1 p:nth-child(3) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+.morph-button.open .content-style-form-1 h2,
+.morph-button.open .content-style-form-1 p,
+.morph-button.open .content-style-form-1 .icon-close {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+@media screen and (max-width: 770px) {
+	.content-style-overlay {
+		font-size: 75%;
+	}
+
+	.content-style-overlay .icon-close {
+		top: 5px;
+		right: 5px;
+	}
+}
+
+/* Morph Button: Default Styles */
+
+
+
+.morph-button > button {
+	position: relative;
+	padding: 0 1px;
+	border: none;
+	background-color: #e85657;
+	color: #f9f6e5;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+	line-height: 40px;
+	overflow: hidden;
+	margin:12px auto;
+}
+
+.morph-button.open > button {
+	pointer-events: none;
+}
+
+.morph-content {
+	pointer-events: none;
+}
+
+.morph-button.open .morph-content {
+	pointer-events: auto;
+}
+
+/* Common styles for overlay and modal type (fixed morph) */
+.morph-button-fixed,
+.morph-button-fixed .morph-content {
+	width: 36px;
+	height: 40px;
+}
+
+.morph-button-fixed > button {
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity 0.1s 0.5s;
+	transition: opacity 0.1s 0.5s;
+}
+
+.morph-button-fixed.open > button {
+	opacity: 0;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+.morph-button-fixed .morph-content {
+	position: fixed;
+	z-index: 900;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content {
+	opacity: 1;
+}
+
+.morph-button-fixed .morph-content > div {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+	transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content > div {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s 0.5s;
+	transition: opacity 0.3s 0.5s;
+}
+
+.morph-button-fixed.active > button {
+	z-index: 2000;
+}
+
+.morph-button-fixed.active .morph-content {
+	z-index: 1900;
+}
+
+/* Transitions for overlay button and sidebar button */
+.morph-button-overlay .morph-content,
+.morph-button-sidebar .morph-content {
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+}
+
+.morph-button-overlay.open .morph-content,
+.morph-button-sidebar.open .morph-content {
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;	
+}
+
+/* Morph Button Style: Overlay */
+.morph-button.morph-button-overlay {
+	margin: 30px auto;
+}
+
+.morph-button-overlay .morph-content {
+	overflow: hidden;
+	background: #e85657;
+}
+
+.morph-button-overlay.open .morph-content {
+	top: 0 !important;
+	left: 0 !important;
+	width: 100%;
+	height: 100%;
+}
+
+/* Morph Button Style: Modal */
+.morph-button-modal::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	pointer-events: none;
+}
+
+.morph-button-modal.open::before {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.morph-button-modal.active::before {
+	z-index: 1800;
+}
+
+.morph-button-modal .morph-content {
+	overflow: hidden;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-modal.open .morph-content {
+	top: 50% !important;
+	left: 50% !important;
+	margin: -210px 0 0 -300px;
+	width: 600px;
+	height: 420px;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+/* Colors and sizes for individual modals */
+.morph-button.morph-button-modal-1 {
+	float: left;
+}
+
+.morph-button.morph-button-modal-2,
+.morph-button.morph-button-modal-3 {
+	display: inline-block;
+	margin: 0px 0px;
+}
+
+.morph-button-modal-1 > button,
+.morph-button-modal-1 .morph-content {
+	background-color: #553445;
+}
+
+.morph-button-modal-2 .morph-content,
+.morph-button-modal-3 .morph-content {
+	background-color: #fff;
+	color: #fd3d1a;
+}
+.morph-button-modal-2 > button,.morph-button-modal-3 > button{
+	background-color: #121214;
+}
+.morph-button-modal-1::before {
+	background: rgba(240,221,204,0.7);
+}
+
+.morph-button-modal-2.open .morph-content {
+	margin: -210px 0 0 -170px;
+	width: 340px;
+	height: 420px;
+}
+.morph-button-modal-3.open .morph-content {
+	margin: -255px 0 0 -210px;
+	width: 375px;
+	height: 510px;
+}
+.morph-button-modal-3.open .morph-content > div {
+	height: 420px;
+}
+.morph-button-modal-2.open .morph-content > div,
+.morph-button-modal-3.open .morph-content > div {
+ 	-webkit-transition: opacity 0.3s 0.3s;
+	transition: opacity 0.3s 0.3s;
+}
+.morph-button-modal-4.open .morph-content {
+	margin: -200px 0 0 -320px;
+	width: 640px;
+	height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
